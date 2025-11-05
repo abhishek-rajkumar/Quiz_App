@@ -1,0 +1,117 @@
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Soft gradient background */
+    background: linear-gradient(135deg, #6fccd3, #66a6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Quiz App container */
+.app {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Header */
+.quiz-app {
+    background: linear-gradient(135deg, #283048, #859398);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Question area */
+.quiz {
+    padding: 25px 20px;
+}
+
+.quiz h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Option buttons */
+.btn {
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    text-align: left;
+    cursor: pointer;
+    background: #f0f0f0;
+    color: #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0f0f0f, #66a6ff);
+    color: #fff;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(102,166,255,0.4);
+}
+
+/* Button states */
+.correct {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+    color: #fff;
+}
+
+.incorrect {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #fff;
+}
+
+/* Next button */
+#next-btn {
+    display: block;
+    font-weight: 600;
+    width: 150px;
+    padding: 12px;
+    margin: 25px auto 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#next-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(91,134,229,0.4);
+}
+
+/* Smooth transitions on all elements */
+button, .app, body {
+    transition: all 0.3s ease-in-out;
+}
